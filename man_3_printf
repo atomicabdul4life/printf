@@ -242,7 +242,7 @@ To print the result of basic mathematical operations prepended by signs and
 all numbers printed with a minimum precision of two digits:
 
 .RS
-#include "holberton.h"
+#include "main.h"
 
 int main(void)
 
@@ -271,7 +271,7 @@ int main(void)
 
 	_printf("%-30ld -> LONG_MIN\\n", LONG_MIN);
 
-}	
+}
 .RE
 
 .SH SEE ALSO

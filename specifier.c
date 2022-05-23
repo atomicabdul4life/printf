@@ -6,7 +6,7 @@
  *
  * Return: the number of bytes printed
  */
-int (*get_specifier(char *s))(va_list ap, params_t *params)
+int (*specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
 		{"c", print_char},
@@ -48,7 +48,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
  */
 int get_print_func(char *s, va_list ap, params_t *params)
 {
-	int (*f)(va_list, params_t *) = get_specifier(s);
+	int (*f)(va_list, params_t *) = specifier(s);
 
 	if (f)
 		return (f(ap, params));
